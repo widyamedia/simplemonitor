@@ -5,9 +5,7 @@ tags
 .ropeproject
 .bundle
 .idea/
-monitor.ini
 config.ini
-monitors.ini
 monitor.json
 htmlcov/
 .coverage

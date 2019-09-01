@@ -1,0 +1,14 @@
+[Unit]
+Description=simplemonitor
+After=multi-user.target
+[Service]
+Type=simple
+User=namauser
+Group=namagroup
+#path disesuaikan
+WorkingDirectory=/data/progs/simplemonitor
+ExecStart=/data/progs/simplemonitor/monitor.py
+WatchdogSec=999
+Restart=always
+[Install]
+WantedBy=multi-user.target
