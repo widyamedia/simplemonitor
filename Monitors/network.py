@@ -67,7 +67,7 @@ class MonitorHTTP(Monitor):
         self.request_timeout = Monitor.get_config_option(
             config_options,
             'timeout',
-            default=5,
+            default=18,
             required_type='int'
         )
 
@@ -117,7 +117,7 @@ class MonitorHTTP(Monitor):
     def describe(self):
         """Explains what we do."""
         if self.regexp is None:
-            message = "Checking that accessing %s returns HTTP/200 OK" % self.url
+            message = "mail-124 sedang mengecek %s harus HTTP/200" % self.url
         else:
             message = "Checking that accessing %s returns HTTP/200 OK and that /%s/ matches the page" % (self.url, self.regexp_text)
         return message
